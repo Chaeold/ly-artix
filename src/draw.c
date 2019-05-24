@@ -337,7 +337,7 @@ void draw_input_mask(struct input* input)
 		{
 			tb_change_cell(input->x + i,
 				input->y,
-				'o',
+				'*',
 				config.fg,
 				config.bg);
 		}

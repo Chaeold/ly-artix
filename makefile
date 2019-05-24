@@ -64,12 +64,13 @@ install:$(BIND)/$(NAME)
 	install -DZ $(RESD)/config.ini -t ${DESTDIR}/etc/ly
 	install -dZ ${DESTDIR}/etc/ly/lang
 	install -DZ $(RESD)/lang/* -t ${DESTDIR}/etc/ly/lang
-	install -DZ ly.service -t ${DESTDIR}/usr/lib/systemd/system
+	install -dZ ${DESTDIR}/etc/sv/ly-runit-service
+	install -DZ ly-runit-service/* -t ${DESTDIR}/etc/sv/ly-runit-service
 
 uninstall:
 	rm -rf ${DESTDIR}/etc/ly
 	rm -f ${DESTDIR}/usr/bin/ly
-	rm -f ${DESTDIR}/usr/lib/systemd/system/ly.service
+	rm -rf ${DESTDIR}/etc/sv/ly-runit-service
 
 clean:
 	@echo "cleaning workspace"

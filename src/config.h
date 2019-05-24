@@ -5,7 +5,7 @@
 
 extern char* info_line;
 
-#define LY_SYSTEMD
+//#define LY_SYSTEMD
 enum err {OK, ERR, SECURE_RAM, XSESSIONS_MISSING, XSESSIONS_READ, ERR_PERM_GROUP, ERR_PERM_USER, ERR_PERM_DIR};
 enum display_server {DS_WAYLAND, DS_SHELL, DS_XINITRC, DS_XORG};
 
