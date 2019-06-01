@@ -27,7 +27,7 @@ before going further:
 ## Cloning and Compiling
 This repository uses submodules, to clone it properly please use
 ```
-git clone --recurse-submodules https://github.com/cylgom/ly.git
+git clone --recurse-submodules https://github.com/drozdowsky/ly-void.git
 ```
 
 To compile you just need to launch make in the created folder
@@ -41,7 +41,7 @@ also run it in terminal emulators, but desktop environments won't start
 sudo make run
 ```
 
-Then, install Ly and the systemd service file
+Then, install Ly and the runit service file
 ```
 sudo make install
 ```
@@ -62,6 +62,12 @@ edit open the configuration and make sure `force_update` is enabled
 [box_main]
 force_update=1
 ```
+
+## xinitrc
+If you use .xinitrc to start window manager please
+look into xsetup.sh (it is installed in `/etc/ly/`).
+This fork uses `/bin/sh` to source `.xsession`
+instead of executing it in bash like the main repository do.
 
 ## Configuration
 All the configuration takes place in `/etc/ly/config.ini`.
