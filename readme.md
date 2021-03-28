@@ -93,11 +93,6 @@ Use the F1 and F2 keys to respectively shutdown and reboot.
 Take a look at your .xsession if X doesn't start, as it can interfere
 (this file is launched with X to configure the display properly).
 
-## PSX DOOM fire animation
-To enable the famous PSX DOOM fire described by [Fabien Sanglard](http://fabiensanglard.net/doom_fire_psx/index.html),
-just uncomment `animate = true` in `/etc/ly/config.ini`. You may also
-disable the main box borders with `hide_borders = true`.
-
 ## Additional Information
 The name "Ly" is a tribute to the fairy from the game Rayman.
 Ly was tested by oxodao, who is some seriously awesome dude.
