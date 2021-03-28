@@ -67,15 +67,14 @@ Then, install Ly and the runit service file
 ```
 sudo make install
 ```
+You can disable getty-tty2
+```
+sudo unlink /run/runit/service/agetty-tty2
+```
 
 Now enable the runit service to make it spawn on startup
 ```
 sudo ln -s /etc/runit/sv/ly-runit-service/ /run/runit/service/
-```
-
-You can disable getty-tty2
-```
-sudo unlink /run/runit/service/agetty-tty2
 ```
 
 ## Configuration
