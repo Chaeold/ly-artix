@@ -1,5 +1,4 @@
-# Ly - a TUI display manager (for Void Linux)
-[![CodeFactor](https://www.codefactor.io/repository/github/cylgom/ly/badge/master)](https://www.codefactor.io/repository/github/cylgom/ly/overview/master)
+# Ly - a TUI display manager (for Artix Linux)
 ![Ly screenshot](https://user-images.githubusercontent.com/5473047/42466218-8cb53d3c-83ae-11e8-8e53-bae3669f959c.png "Ly screenshot")
 
 Ly is a lightweight TUI (ncurses-like) display manager for Linux and BSD.
@@ -7,6 +6,8 @@ Ly is a lightweight TUI (ncurses-like) display manager for Linux and BSD.
 ## Patches added in fork
 - runit service instead of systemd one by @qub1750ul
 - it language patch by @termgod
+- service installed on default artix service path (/etc/runit/sv/)
+- xsetup.sh is from the original ly by @nullgemm not from ly-void by @drozdowsky
 
 ## Dependencies
  - a C99 compiler (tested with tcc and gcc)
@@ -48,7 +49,7 @@ changing the source code won't be necessary :)
 ## Cloning and Compiling
 Clone the repository
 ```
-git clone https://github.com/cylgom/ly.git
+git clone https://github.com/chaeold/ly-artix.git
 ```
 
 Fetch submodules
@@ -61,12 +62,6 @@ Compile
 make
 ```
 
-Test in the configured tty (tty2 by default)
-or a terminal emulator (but desktop environments won't start)
-```
-sudo make run
-```
-
 Install Ly and the provided systemd service file
 Then, install Ly and the runit service file
 ```
@@ -75,12 +70,12 @@ sudo make install
 
 Now enable the runit service to make it spawn on startup
 ```
-sudo ln -s /etc/sv/ly-runit-service /var/service/
+sudo ln -s /etc/runit/sv/ly-runit-service/ /run/runit/service/
 ```
 
 You can disable getty-tty2
 ```
-sudo rm /var/service/agetty-tty2
+sudo unlink /run/runit/service/agetty-tty2
 ```
 
 ## Configuration
@@ -106,3 +101,4 @@ disable the main box borders with `hide_borders = true`.
 ## Additional Information
 The name "Ly" is a tribute to the fairy from the game Rayman.
 Ly was tested by oxodao, who is some seriously awesome dude.
+ly-artix tested by me, let me know if there's any issue.
