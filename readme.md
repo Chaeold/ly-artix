@@ -49,7 +49,7 @@ changing the source code won't be necessary :)
 ## Cloning and Compiling
 Clone the repository
 ```
-git clone https://github.com/chaeold/ly-artix.git
+git clone https://github.com/pienapin/ly-artix.git
 ```
 
 Fetch submodules
