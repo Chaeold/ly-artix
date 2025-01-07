@@ -1,3 +1,6 @@
+## Deprecated
+try ly package for runit from artix official repo [here](https://packages.artixlinux.org/packages/world/any/ly-runit/).
+
 # Ly - a TUI display manager (for Artix Linux)
 ![Ly screenshot](https://user-images.githubusercontent.com/5473047/42466218-8cb53d3c-83ae-11e8-8e53-bae3669f959c.png "Ly screenshot")
 
